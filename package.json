@@ -1,6 +1,6 @@
 {
   "name": "react-native-scrolling-images",
-  "version": "1.1.0",
+  "version": "1.0.4",
   "description": "Easily create animated scrolling images for backgrounds and parallax",
   "license": "MIT",
   "repository": "AndreYonadam/react-native-scrolling-images",
