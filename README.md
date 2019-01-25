@@ -9,7 +9,7 @@ Easily create looping scrolling images for backgrounds and parallax.
 - Supports scrolling in the up, down, left and right directions
 - Custom scrolling speed
 - Takes in an array of images to repeat
-- Repeats image components automaticlly to fill up screen size
+- Repeats image components automaticlly to fill the screen
 - Smooth animations
 - Lightweight
 - Compatible with Expo
