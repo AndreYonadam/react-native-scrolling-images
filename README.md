@@ -32,7 +32,6 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { Constants } from 'expo';
 
-// You can import from local files
 import ScrollingBackground from 'react-native-scrolling-images';
 
 export default class App extends React.Component {
