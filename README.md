@@ -66,14 +66,14 @@ const styles = StyleSheet.create({
 ## API Reference
 
 ### Properties
-| Prop | Description | Required |
-|---|---|---|
-|**`speed`**|Duration it takes for the images to repeat (The lower the faster the animation). |**Yes**|
-|**`direction`**|Direction of scrolling. Value values: "up", "down", "left" and right". |**Yes**|
-|**`images`**|Array of image references. Refer to the quick start section for an example. |**Yes**|
+| Prop | Description | Accepted Values | Required |
+|---|---|---|---|
+|**`speed`**|Duration it takes for the images to repeat (The lower the faster the animation). |**Number**|**Yes**|
+|**`direction`**|Direction of scrolling. |"up", "down", "left" or "right"|**Yes**|
+|**`images`**|Images stiched together to create the looping pattern. |Array of image references (Check quick start section for example).|**Yes**|
 
 ### Styling
-The only styling property used is 'backgroundColor'. This helps default to a background color in case the image doesn't happen to load instantly.
+The only styling property used is 'backgroundColor'. This helps default to a background color in case the image doesn't load instantly.
 ## To-Do
-- Auto rotating images when direction is "left" or "right"
-- Figure out why there is slight delay on animation loop when Native Driver is enabled
+- Auto rotating images when direction is "left" or "right". If the user picks one of these optinos currently, they might have to rotate the actual images manually depending on how they want them displayed.
+- Figure out why there is slight delay on animation loop when Native Driver is enabled. When Native Driver is set to true for the current animations, there is a slight pause after the second animation.
