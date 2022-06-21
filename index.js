@@ -11,9 +11,7 @@ import {
 export default class ScrollingBackground extends Component {
   constructor(props) {
     super(props);
-  }
 
-  componentWillMount() {
     let imageComponents = []; // Store all image components to dynamiclly add
     let heightOfAllImages = 0; // Store sum of height of scaled images
     let heightOfAllImagesUnscaled = 0; // Store sum of height of unscaled images
@@ -77,13 +75,14 @@ export default class ScrollingBackground extends Component {
         break;
     }
 
-    this.setState({
+    this.state = {
       imageComponents: imageComponents,
       heightOfAllImages: heightOfAllImages,
       heightOfAllImagesUnscaled: heightOfAllImagesUnscaled,
       topPositionAnimated: topPositionAnimated,
       rotation: rotation
-    });
+    };
+    this.ready = true;
   }
 
   componentDidMount() {
@@ -132,6 +131,7 @@ export default class ScrollingBackground extends Component {
   }
 
   render() {
+    if (!this.ready) return null;
     let elements = [];
     for (imageComponent of this.state.imageComponents) {
       elements.push(
