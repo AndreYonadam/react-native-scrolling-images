@@ -9,6 +9,9 @@ import {
 } from "react-native";
 
 export default class ScrollingBackground extends Component {
+  static defaultProps = {
+    useNativeDriver: false // Run animations on the UI thread instead of the main thread. Might cause slight lag when loop restarts if enabled
+	}
   constructor(props) {
     super(props);
 
@@ -93,15 +96,15 @@ export default class ScrollingBackground extends Component {
             toValue: -1 * this.state.heightOfAllImages,
             duration: this.props.speed * this.state.heightOfAllImagesUnscaled,
             delay: 0,
-            easing: Easing.linear
-            // useNativeDriver: true // Creates slight lag when loop restarts
+            easing: Easing.linear,
+            useNativeDriver: this.props.useNativeDriver,
           }),
           Animated.timing(this.state.topPositionAnimated, {
             toValue: 0,
             duration: 0,
             delay: 0,
-            easing: Easing.linear
-            // useNativeDriver: true // Creates slight lag when loop restarts
+            easing: Easing.linear,
+            useNativeDriver: this.props.useNativeDriver,
           })
         ])
       ).start();
@@ -115,15 +118,15 @@ export default class ScrollingBackground extends Component {
             toValue: 0,
             duration: this.props.speed * this.state.heightOfAllImagesUnscaled,
             delay: 0,
-            easing: Easing.linear
-            // useNativeDriver: true // Creates slight lag when loop restarts
+            easing: Easing.linear,
+            useNativeDriver: this.props.useNativeDriver,
           }),
           Animated.timing(this.state.topPositionAnimated, {
             toValue: -1 * this.state.heightOfAllImages,
             duration: 0,
             delay: 0,
-            easing: Easing.linear
-            // useNativeDriver: true // Creates slight lag when loop restarts
+            easing: Easing.linear,
+            useNativeDriver: this.props.useNativeDriver,
           })
         ])
       ).start();
