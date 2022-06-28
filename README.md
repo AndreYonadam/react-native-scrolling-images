@@ -44,6 +44,7 @@ export default class App extends React.Component {
           speed={20}
           direction={"left"}
           images={[require("./assets/greenOrange.png"),require("./assets/blueOrange.png")]}
+          useNativeDriver={true}
         />
       </View>
     );
@@ -71,6 +72,7 @@ const styles = StyleSheet.create({
 |**`speed`**|Duration it takes for the images to repeat (The lower the faster the animation). |**Number**|**Yes**|
 |**`direction`**|Direction of scrolling. |"up", "down", "left" or "right"|**Yes**|
 |**`images`**|Images stiched together to create the looping pattern. |Array of image references (Check quick start section for example).|**Yes**|
+|**`useNativeDriver`**|Specify if the animation should perform natively. |**Boolean** (Defaults to `false`).|**No**|
 
 ### Styling
 The only styling property used is 'backgroundColor'. This helps default to a background color in case the image doesn't load instantly.
